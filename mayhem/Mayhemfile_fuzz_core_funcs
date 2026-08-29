@@ -1,0 +1,9 @@
+project: savantenvs/opensips
+target: fuzz_core_funcs
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_core_funcs/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_core_funcs
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_core_funcs/fuzz_core_funcs.dict

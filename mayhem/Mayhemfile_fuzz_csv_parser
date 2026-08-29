@@ -1,0 +1,8 @@
+project: savantenvs/opensips
+target: fuzz_csv_parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_csv_parser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_csv_parser
+    libfuzzer: true
