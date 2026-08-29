@@ -1,0 +1,8 @@
+project: savantenvs/opensips
+target: fuzz_uri_parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_uri_parser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_uri_parser
+    libfuzzer: true
