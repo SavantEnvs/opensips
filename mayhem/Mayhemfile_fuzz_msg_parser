@@ -1,0 +1,9 @@
+# seed-from: https://app.mayhem.security/savantenvs/opensips/fuzz_msg_parser
+project: savantenvs/opensips
+target: fuzz_msg_parser-mined-837263b
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_msg_parser-mined-837263b/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_msg_parser
+    libfuzzer: true
